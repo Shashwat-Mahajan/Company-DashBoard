@@ -23,7 +23,7 @@ const Login = () => {
                 value={email}
                 onChange={(e) => {
                     setEmail(e.target.value)
-                }}
+                }} 
                 required className= ' bg-transparent outline-none border-2 border-emerald-500 py-4 px-5 rounded-4xl text-xl placeholder:text-gray-300' type='email' placeholder='Enter your Email'></input>
                 <input 
                 value={password}
