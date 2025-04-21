@@ -13,7 +13,7 @@ const employees = [
     "tasks": [
       {
         "Active": true,
-        "New Task": false,
+        "NewTask": false,
         "Completed": true,
         "Failed": false,
         "Task Title": "Fix bug",
@@ -23,7 +23,7 @@ const employees = [
       },
       {
         "Active": false,
-        "New Task": true,
+        "NewTask": true,
         "Completed": false,
         "Failed": false,
         "Task Title": "Write docs",
@@ -33,7 +33,7 @@ const employees = [
       },
       {
         "Active": true,
-        "New Task": true,
+        "NewTask": true,
         "Completed": false,
         "Failed": false,
         "Task Title": "Test module",
@@ -57,7 +57,7 @@ const employees = [
     "tasks": [
       {
         "Active": false,
-        "New Task": false,
+        "NewTask": false,
         "Completed": true,
         "Failed": false,
         "Task Title": "Update UI",
@@ -67,7 +67,7 @@ const employees = [
       },
       {
         "Active": true,
-        "New Task": true,
+        "NewTask": true,
         "Completed": false,
         "Failed": false,
         "Task Title": "Research tech",
@@ -77,7 +77,7 @@ const employees = [
       },
       {
         "Active": false,
-        "New Task": false,
+        "NewTask": false,
         "Completed": false,
         "Failed": true,
         "Task Title": "Fix bug",
@@ -87,7 +87,7 @@ const employees = [
       },
       {
         "Active": true,
-        "New Task": false,
+        "NewTask": false,
         "Completed": false,
         "Failed": false,
         "Task Title": "Add feature",
@@ -111,7 +111,7 @@ const employees = [
     "tasks": [
       {
         "Active": true,
-        "New Task": true,
+        "NewTask": true,
         "Completed": false,
         "Failed": false,
         "Task Title": "Refactor code",
@@ -121,7 +121,7 @@ const employees = [
       },
       {
         "Active": false,
-        "New Task": false,
+        "NewTask": false,
         "Completed": true,
         "Failed": false,
         "Task Title": "Test module",
@@ -131,7 +131,7 @@ const employees = [
       },
       {
         "Active": false,
-        "New Task": true,
+        "NewTask": true,
         "Completed": false,
         "Failed": true,
         "Task Title": "Write docs",
@@ -141,7 +141,7 @@ const employees = [
       },
       {
         "Active": true,
-        "New Task": false,
+        "NewTask": false,
         "Completed": false,
         "Failed": false,
         "Task Title": "Research tech",
@@ -165,7 +165,7 @@ const employees = [
     "tasks": [
       {
         "Active": false,
-        "New Task": true,
+        "NewTask": true,
         "Completed": false,
         "Failed": false,
         "Task Title": "Add feature",
@@ -175,7 +175,7 @@ const employees = [
       },
       {
         "Active": false,
-        "New Task": false,
+        "NewTask": false,
         "Completed": false,
         "Failed": true,
         "Task Title": "Fix bug",
@@ -185,7 +185,7 @@ const employees = [
       },
       {
         "Active": true,
-        "New Task": false,
+        "NewTask": false,
         "Completed": true,
         "Failed": false,
         "Task Title": "Write docs",
@@ -209,7 +209,7 @@ const employees = [
     "tasks": [
       {
         "Active": true,
-        "New Task": true,
+        "NewTask": true,
         "Completed": false,
         "Failed": false,
         "Task Title": "Fix bug",
@@ -219,7 +219,7 @@ const employees = [
       },
       {
         "Active": false,
-        "New Task": false,
+        "NewTask": false,
         "Completed": false,
         "Failed": true,
         "Task Title": "Update UI",
@@ -229,7 +229,7 @@ const employees = [
       },
       {
         "Active": true,
-        "New Task": false,
+        "NewTask": false,
         "Completed": true,
         "Failed": false,
         "Task Title": "Test module",
@@ -239,7 +239,7 @@ const employees = [
       },
       {
         "Active": false,
-        "New Task": true,
+        "NewTask": true,
         "Completed": false,
         "Failed": false,
         "Task Title": "Refactor code",
@@ -252,10 +252,12 @@ const employees = [
 ];
 
 
-const admin = [{
-    "id": 1,
+const admin = [
+  {
+    "id": "1",
+    "name":"Admin",
     "password": "123",
-    "email": "admin1@example.com"
+    "email": "admin1@example.com",
 }]  
 
 export const setLocalStorage = ()=>{
