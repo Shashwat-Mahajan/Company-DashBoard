@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 import { AuthContext } from "./context/AuthProvider";
 
 function App() {
-  const authData = useContext(AuthContext);
+  const [userData,setUserData] = useContext(AuthContext);
   const [loggedinUserData, setLoggedinUserData] = useState(null);
   const [user, setUser] = useState(null);
 
@@ -20,16 +20,16 @@ function App() {
       setUser(loggedinUser.role);
       setLoggedinUserData(userData.data)
     }
-  }, [authData]);
+  }, [userData]);
 
   const handleLogin = (email, password) => {
     if (email == "admin1@example.com" && password == "123") {
-      const admin = authData.admin.find((a) => a.email == email);
-      setLoggedinUserData(admin);
+      // const admin = authData.admin.find((a) => a.email == email);
+      // setLoggedinUserData(admin);
       setUser("admin");
-      localStorage.setItem("loggedinUser", JSON.stringify({ role: "admin",data:admin }));
-    } else if (authData) {
-      const employee = authData.employees.find(
+      localStorage.setItem("loggedinUser", JSON.stringify({ role: "admin"}));
+    } else if (userData) {
+      const employee = userData.find(
         (e) => e.email == email && e.password == password
       );
       if (employee) {
@@ -48,7 +48,7 @@ function App() {
   return (
     <>
       {!user ? <Login handleLogin={handleLogin} /> : ""}
-      {user === "admin" ? <AdminDashboard data={loggedinUserData} /> : user === "employee" ? <EmployeeDashboard data={loggedinUserData} /> : null}
+      {user === "admin" ? <AdminDashboard data={loggedinUserData} changeUser={setUser}/> : user === "employee" ? <EmployeeDashboard data={loggedinUserData} changeUser={setUser}/> : null}
     </>
   );
 }
